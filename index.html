@@ -1,0 +1,165 @@
+
+<html>
+  <head>
+    <title>Clio Programming Language</title>
+    <meta content="">
+    <link rel="stylesheet" href="https://clio-lang.github.io/clio-editor/fonts/fira_code.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="https://clio-lang.github.io/clio-editor/editor.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" type="image/png" href="https://github.com/clio-lang/media/raw/master/logo-64x64.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="header">
+      <div class="description">
+        <div class="logo">
+          <a href="/">
+            <img src="https://github.com/clio-lang/media/raw/master/logo-128x128.png" alt="Clio Programming Language">
+            <h1 class="title">Clio</h1>
+          </a>
+        </div>
+        <div class="about">
+          <div class="about-inner">
+            Clio is a pure functional lazy-evaluated programming language
+            targeting decentralized and distributed systems. It is made to take
+            advantage of multiple CPUs and CPU cores (parallelism) by default,
+            to run on clusters and on the cloud easily.
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <a href="#">Blog</a>
+        <a href="/#features">Features</a>
+        <a href="/#install">Install</a>
+        <a href="https://docs.clio-lang.org/learn">Learn</a>
+        <a href="https://docs.clio-lang.org">Documentation</a>
+        <a href="/#community">Community</a>
+        <a href="/#support">Donate</a>
+      </div>
+    </div>
+    <div class="post-description">
+      <span> Clio compiles to JavaScript. This makes Clio fast, easy to port and
+        easy to extend. It gives Clio a free JIT compiler, a powerful VM and
+        access to lots of existing libraries. It enables Clio to run in the
+        browser and on servers, and anywhere JavaScript can run. </span>
+      <div class="code-example">
+        <pre class="clio-editor" contenteditable="true">fn fib n:
+  if n < 2:  n
+      else: (n - 1 -> fib) +
+            (n - 2 -> fib)
+
+[0:10] -> * fib -> print</pre>
+      </div>
+    </div>
+    <article class="content">
+      <div id="features">
+        <h2> Features </h2>
+        <div class="feature-list">
+          <ul>
+            <li> <a href="#"> Pipes and flows </a> </li>
+            <li> <a href="#"> Lazy Programming </a> </li>
+            <li> <a href="#"> Unlimited recursion </a> </li>
+            <li> <a href="#"> Purely functional </a> </li>
+            <li> <a href="#"> Memoize by default </a> </li>
+            <li> <a href="#"> Scope freezing </a> </li>
+            <li> <a href="#"> No for/while loops </a> </li>
+            <li> <a href="#"> Tensor programming </a> </li>
+            <li> <a href="#"> Conditionals are function definitions </a> </li>
+          </ul>
+          <ul>
+            <li> <a href="#"> Microservices </a> </li>
+            <li> <a href="#"> Network-based foreign function interface </a> </li>
+            <li> <a href="#"> Remote modules and functions </a> </li>
+            <li> <a href="#"> Parallel execution </a> </li>
+            <li> <a href="#"> Immune to bad practices </a> </li>
+            <li> <a href="#"> Transforms </a> </li>
+            <li> <a href="#"> Anonymous recursion </a> </li>
+            <li> <a href="#"> Function overloading </a> </li>
+            <li> <a href="#"> Multi-platform </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div id="install">
+        <h2> Install </h2>
+        To install, you need node.js, then to install clio you can run:
+        <code class="shell">npm install clio</code>
+      </div>
+      <div id="community">
+        <h2> Community </h2>
+        <div class="community-list">
+          <a class="community-link" href="https://github.com/clio-lang/clio">
+            <i class="fab fa-github-alt"></i>
+            Source
+          </a>
+          <!--a class="community-link" href="https://discord.gg/tdQHa5r">
+            <i class="fab fa-discord"></i>
+            Discord
+          </a-->
+          <a class="community-link" href="https://t.me/joinchat/B0kZo0kVldfXldTDqz95XA">
+            <i class="fab fa-telegram"></i>
+            Telegram
+          </a>
+          <a class="community-link" href="http://rosettacode.org/wiki/Clio">
+            <i class="fas fa-code"></i>
+            RosettaCode
+          </a>
+          <a class="community-link" href="">
+            <i class="fab fa-medium"></i>
+            Medium
+          </a>
+          <a class="community-link" href="">
+            <i class="fab fa-trello"></i>
+            Trello
+          </a>
+          <a class="community-link" href="">
+            <i class="fab fa-reddit-alien"></i>
+            Reddit
+          </a>
+          <a class="community-link" href="">
+            <i class="fab fa-twitter"></i>
+            Twitter
+          </a>
+        </div>
+      </div>
+      <div id="support">
+        <h2> Support </h2>
+        Clio is a work in progress and it's not production ready yet, but you can help make it happen faster. Support the project and the creator on:
+        <div class="support-list">
+          <a class="support-link" href="#">
+            <img src="/media/opencollective.svg" alt="">
+            <span>Open Collective</span>
+          </a>
+          <a class="support-link" href="#">
+            <img src="/media/patreon.svg" alt="">
+            <span>Patreon</span>
+          </a>
+          <a class="support-link" href="https://paypal.me/pouyaeghbali">
+            <img src="/media/paypal.svg" alt="">
+            <span>PayPal</span>
+          </a>
+          <a class="support-link" href="https://github.com/clio-lang/clio/stargazers">
+            <img src="/media/star.svg" alt="">
+            <span>Star on Github</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    <div class="footer">
+      <div class="licence">
+        Clio is released under Apache licence version 2.0, this website and all
+        related content have the same licencing terms.
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js"></script>
+    <script src="https://clio-lang.github.io/clio-editor/jquery.caret.min.js"></script>
+    <script src="https://clio-lang.github.io/clio-editor/clio.js"></script>
+    <script src="https://clio-lang.github.io/clio-editor/editor.js"></script>
+    <script>
+      $('.clio-editor').clio_editor();
+    </script>
+  </body>
+</html>

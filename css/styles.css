@@ -1,0 +1,380 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #EEEEEE;
+  padding-bottom: 8em;
+  font-family: 'Fira Sans';
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1279px) {
+  #navigation {
+    display: none;
+  }
+}
+
+#navigation {
+  padding: 1em;
+  padding-right: 3em;
+  position: fixed;
+  margin-left: -250px;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: #333;
+}
+
+#navigation a::after {
+  content: "->";
+  color: transparent;
+  margin-right: calc(.5em + 5px);
+}
+
+#navigation a:hover::after {
+  content: "";
+  margin-right: 0;
+}
+
+#navigation a:hover::before {
+  content: "->";
+  font-family: 'Fira Code';
+  margin-right: .5em;
+  text-shadow: 1px 1px #CCC;
+  color: rgb(100,144,138);
+}
+
+#navigation ul {
+  margin: 0;
+}
+
+#content {
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-bottom: 1em;
+}
+
+#content code {
+  color: rgb(204,42,65);
+}
+
+#content p a, #content li a {
+  color: rgb(100,144,138);
+  text-decoration: none;
+}
+
+#content p a:hover, #content li a:hover {
+  color: rgb(204,42,65)
+}
+
+#content p {
+  padding: 1em;
+  padding-top: 0;
+}
+
+#content .clio-ide {
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.clio-ide {
+  box-shadow: 1px 1px 8px 1px rgba(0,0,0,.1);
+  min-width: 100% !important;
+}
+
+#header {
+  font-family: 'Fira Sans';
+  color: #515151;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+  cursor: default;
+}
+
+.description {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #515151;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #373737;
+  font-size: 1.4em;
+  padding: 1em .7em;
+  border: 2px solid transparent;
+}
+
+.menu a:hover {
+  text-shadow: 1px 1px #CCC;
+  border-bottom: 2px solid rgb(53,19,48);
+  box-sizing: border-box;
+  position: relative;
+}
+
+#header h1 {
+  padding: 1em;
+  margin: 0;
+  animation: 6s title-shadow step-end infinite;
+  animation-play-state: paused;
+}
+
+.content, code {
+  font-family: 'Fira Sans';
+  color: #515151;
+}
+
+.content h2::before {
+  content: '#';
+  font-style: italic;
+  text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC;
+  color: rgb(100,144,138);
+  margin-right: .5em;
+}
+
+.paragraph {
+  padding: 1em;
+}
+
+.paragraph + .clio-ide {
+  margin-top: 1em;
+}
+
+.clio-ide + .paragraph {
+  margin-top: 1em;
+}
+
+.paragraph code {
+  color: #c66;
+}
+
+.clio-ide + h2 {
+  margin-top: 1em;
+}
+
+h2 {
+  padding: 1em;
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+.post-description {
+  font-family: 'Fira Sans';
+  color: #515151;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.post-description .code-example {
+  margin-top: 2em;
+  width: 110%;
+}
+
+#header h1:hover {
+  animation-play-state: running;
+}
+
+@keyframes title-shadow {
+  9%  { text-shadow: 1px 1px #CCC }
+  18% { text-shadow: 1px 1px #CCC, 2px 2px }
+  27% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC }
+  36% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px }
+  46% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px, 5px 5px #CCC }
+  54% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px, 5px 5px #CCC, 6px 6px }
+  63% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px, 5px 5px #CCC, 6px 6px, 7px 7px #CCC }
+  72% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px, 5px 5px #CCC, 6px 6px, 7px 7px #CCC, 8px 8px }
+  81% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px, 5px 5px #CCC, 6px 6px, 7px 7px #CCC, 8px 8px, 9px 9px #CCC }
+  90% { text-shadow: 1px 1px #CCC, 2px 2px, 3px 3px #CCC, 4px 4px, 5px 5px #CCC, 6px 6px, 7px 7px #CCC, 8px 8px, 9px 9px #CCC, 10px 10px }
+}
+
+#header .about {
+  flex-grow: 2;
+  font-size: 18px;
+  padding: 1em;
+  padding-top: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.about-inner {
+  margin: auto 0;
+  padding-top: 8px;
+  padding-left: 2.5em;
+  border-left: 4px solid #515151;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-list {
+    padding: 1em;
+  }
+  .feature-list ul {
+    padding: 0;
+    width: 360px;
+    margin: 0;
+  }
+}
+
+.feature-list ul {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#install code {
+  margin-top: 1em;
+}
+
+code.shell {
+  display: block;
+  font-family: 'Fira Code';
+  padding: 1em;
+}
+
+.community-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.community-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+  margin: 1em;
+}
+
+.community-link:hover {
+  color: rgb(204,42,65);
+}
+
+.community-link i {
+  font-size: 3em;
+  margin-bottom: .1em;
+}
+
+.support-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.support-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+  margin: 1em;
+}
+
+.support-link:hover {
+  color: rgb(204,42,65);
+}
+
+.support-link img {
+  height: 64px;
+  margin-bottom: .5em;
+  filter: grayscale(100%);
+  transition: .1s ease-in all;
+}
+
+.support-link:hover img {
+  filter: grayscale(0%);
+}
+
+.feature-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.feature-list a::after {
+  content: "->";
+  color: transparent;
+  margin-right: calc(.5em + 5px);
+}
+
+.feature-list a:hover::after {
+  content: "";
+  margin-right: 0;
+}
+
+.feature-list a:hover::before {
+  content: "->";
+  font-family: 'Fira Code';
+  margin-right: .5em;
+  text-shadow: 1px 1px #CCC;
+  color: rgb(100,144,138);
+}
+
+#content .two-col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#content .two-col > .section {
+  width: 50%;
+  min-width: 450px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  padding-top: 2em;
+  margin-top: 1em;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.nav-title {
+  margin-bottom: 1em;
+}
+
+.separator {
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.ul-expand-indicator {
+  list-style: none;
+}
