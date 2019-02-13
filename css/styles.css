@@ -98,6 +98,31 @@ body {
 
 .description {
   display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .description .about-inner {
+    border-left: none;
+    border-top: 4px solid #515151;
+    padding-left: 1em;
+    padding-top: 2em;
+  }
+  .description .logo {
+    padding: 2em;
+    padding-bottom: 1em;
+  }
+  .clio-ide .open-file,
+  .clio-ide .show-ast,
+  .clio-ide .save-file {
+    display: none !important;
+  }
+  .clio-ide .line-numbers span:before {
+    font-size: 0.95em;
+  }
+  .clio-ide .clio-editor {
+    font-size: 0.95em;
+  }
 }
 
 .logo {
