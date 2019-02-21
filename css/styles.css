@@ -63,12 +63,12 @@ body {
   color: rgb(204,42,65);
 }
 
-#content p a, #content li a {
+#content p a, #content li a, #install a, .support-star a {
   color: rgb(100,144,138);
   text-decoration: none;
 }
 
-#content p a:hover, #content li a:hover {
+#content p a:hover, #content li a:hover, #install a:hover, .support-star a:hover {
   color: rgb(204,42,65)
 }
 
@@ -98,10 +98,12 @@ body {
 
 .description {
   display: flex;
-  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
+  .description {
+    flex-wrap: wrap;
+  }
   .description .about-inner {
     border-left: none;
     border-top: 4px solid #515151;
